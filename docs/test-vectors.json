@@ -1,0 +1,20 @@
+{
+  "note": "P-256 ECDH + HKDF-SHA256 + AES-256-GCM. Public keys are 65-byte uncompressed points (base64url, no padding). Private scalars are hex (32 bytes).",
+  "code": "7KQ2M9XD",
+  "phonePrivateD_hex": "e48efd754386e4731a02abe0493a6511122bb53f3c1ba84aef8fa14356fe367b",
+  "phonePub": "BOseK4UYJEcQ9Y1RPDuLwypRCHdUJPEI8ew36GezuYJHgkEQaglaET1I-TfeaIlFjwPRwfQyLlzgIaJIlVZBQb4",
+  "browserPrivateD_hex": "e8ccec1d966017dd5d1b329ea71f1179ec07a56e9273ac734a312f8557ccffc1",
+  "browserPub": "BAAUloXYwHZuOu8UQRwIkJP89So57At7V2p7cQwv_wIvIdj_LqGLLQRbHuFdkArTdW1av8LMOdxgQwCHN6LKvuM",
+  "expected": {
+    "sas": "DDNN-J25K",
+    "aesKey_hex": "d94838d7483e3b6f36263fcf31053de4ebed44c2d2e56dfa036c629b9c654321"
+  },
+  "encrypt": {
+    "password": "Pa$$w0rd!@#_+-=[]{}|;':\",./<>?`~Zz",
+    "iv_hex": "0102030405060708090a0b0c",
+    "id": "AQIDBAUGBwgJCgsM",
+    "aad": "7KQ2M9XD|AQIDBAUGBwgJCgsM",
+    "iv": "AQIDBAUGBwgJCgsM",
+    "ct": "xBoQp66bBCc8L2Hxn5LY4GJ1rfD20xhN4krHNYiiquB4d9eMajsMVWJUAOSSQuGyPEOXI0thTp3EQXZ0vPgGe5Fme6KMMJ1G3ritnoHDi6DidpoSlvHzizweymdGS00TkuU4rA36Bni1MQOVS_BirVEJFZGnTVYSRQacAKmErCUcMZu7iIEMYO7zCR9UqFvQ"
+  }
+}

@@ -1,0 +1,19 @@
+name = "room-relay"
+main = "src/index.js"
+compatibility_date = "2025-06-01"
+
+# Static website (public/) is served directly; /api/* and /ws/* go to the Worker.
+[assets]
+directory = "./public"
+
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "Room"
+
+[[durable_objects.bindings]]
+name = "LIMITER"
+class_name = "Limiter"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Room", "Limiter"]

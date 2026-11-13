@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Phone to clipboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <h1>Phone to clipboard</h1>
+    <p class="lede">Send a saved password from your phone to this computer’s clipboard. Nothing is installed and the server never sees the password.</p>
+
+    <section id="s-join">
+      <label for="code">Pairing code from your phone</label>
+      <div class="row">
+        <input id="code" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="12" placeholder="ABCD-EFGH" inputmode="text">
+        <button id="btn-join" type="button">Connect</button>
+      </div>
+    </section>
+
+    <section id="s-verify" hidden>
+      <p>Check that your phone shows this same code, then tap <strong>Approve</strong> on the phone.</p>
+      <div id="sas" class="sas" aria-live="polite">----</div>
+      <p class="hint">If the codes differ, do not approve. Tap Deny on the phone.</p>
+      <button id="btn-cancel" type="button" class="ghost">Cancel</button>
+    </section>
+
+    <section id="s-live" hidden>
+      <div class="status"><span id="dot" class="dot"></span><span id="state">Connected</span></div>
+      <p id="live-msg" class="live-msg">Tap a password on your phone.</p>
+      <label class="check"><input id="clear" type="checkbox" checked> Clear the clipboard 30 seconds after copying</label>
+      <p class="hint">Keep this window open beside your work page. When a password arrives, click anywhere in this window once to copy it, then click the password box and press Ctrl+V.</p>
+      <button id="btn-leave" type="button" class="ghost">Disconnect</button>
+    </section>
+
+    <p id="msg" role="status" aria-live="polite" class="msg"></p>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
