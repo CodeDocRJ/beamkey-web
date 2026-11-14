@@ -17,3 +17,8 @@ class_name = "Limiter"
 [[migrations]]
 tag = "v1"
 new_sqlite_classes = ["Room", "Limiter"]
+
+ routes = [
+     { pattern = "getbeamkey.com", custom_domain = true },
+     { pattern = "www.getbeamkey.com", custom_domain = true }
+   ]
