@@ -1,13 +1,13 @@
 {
   "note": "P-256 ECDH + HKDF-SHA256 + AES-256-GCM. Public keys are 65-byte uncompressed points (base64url, no padding). Private scalars are hex (32 bytes).",
   "code": "7KQ2M9XD",
-  "phonePrivateD_hex": "e48efd754386e4731a02abe0493a6511122bb53f3c1ba84aef8fa14356fe367b",
-  "phonePub": "BOseK4UYJEcQ9Y1RPDuLwypRCHdUJPEI8ew36GezuYJHgkEQaglaET1I-TfeaIlFjwPRwfQyLlzgIaJIlVZBQb4",
-  "browserPrivateD_hex": "e8ccec1d966017dd5d1b329ea71f1179ec07a56e9273ac734a312f8557ccffc1",
-  "browserPub": "BAAUloXYwHZuOu8UQRwIkJP89So57At7V2p7cQwv_wIvIdj_LqGLLQRbHuFdkArTdW1av8LMOdxgQwCHN6LKvuM",
+  "phonePrivateD_hex": "846122c7509909a467860504d37c7c02bc9e933836800fc2c239413970e81155",
+  "phonePub": "BJI3e9Lep26AvjC8ZJaZ61n9gSZYfK05MNqPCazWDbI_q1jrRakyvZALN9PlfdAKNg9rczI6m2Oj5aFD0_p2gy0",
+  "browserPrivateD_hex": "f9bd06274b84b32fa7e7b6557808781370d80ec032ca825583da7040bcb12118",
+  "browserPub": "BHM0E23ZDQd83gfHHoTmCGRw8BH_omEFq-hKMd8FlhyNPi_uOVXPBVAPOaI_LTc6Ljjub5LwkKJcyCsDHaiqxfA",
   "expected": {
-    "sas": "DDNN-J25K",
-    "aesKey_hex": "d94838d7483e3b6f36263fcf31053de4ebed44c2d2e56dfa036c629b9c654321"
+    "sas": "YCQD-T4WG",
+    "aesKey_hex": "1e4c98aaaf16f96b13b7fa314c19a14162d901fd5193112a2f34731567db6c67"
   },
   "encrypt": {
     "password": "Pa$$w0rd!@#_+-=[]{}|;':\",./<>?`~Zz",
@@ -15,6 +15,6 @@
     "id": "AQIDBAUGBwgJCgsM",
     "aad": "7KQ2M9XD|AQIDBAUGBwgJCgsM",
     "iv": "AQIDBAUGBwgJCgsM",
-    "ct": "xBoQp66bBCc8L2Hxn5LY4GJ1rfD20xhN4krHNYiiquB4d9eMajsMVWJUAOSSQuGyPEOXI0thTp3EQXZ0vPgGe5Fme6KMMJ1G3ritnoHDi6DidpoSlvHzizweymdGS00TkuU4rA36Bni1MQOVS_BirVEJFZGnTVYSRQacAKmErCUcMZu7iIEMYO7zCR9UqFvQ"
+    "ct": "qRmBoPS6vE2JZ3SWrZCGlgH6JPV8nOfrLTATGazXmmX9IHPKt_W2rQBdOif3Duh56Wq-P_Y2Y9sIShGBK5MHPUqHFJ6uW4Spp3OGSrC_QfzTluplo0zlqhHzxaL6aoQDM-PRcAcIsBehHnzQFQJdfOhrdFdcqKW21FVNq31SnZP1OiAODYMPUIFZVDvCPSoV"
   }
 }

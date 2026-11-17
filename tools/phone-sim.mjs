@@ -38,7 +38,7 @@ ws.on("message", async (data) => {
 ws.on("close", () => { console.log("socket closed"); process.exit(0); });
 
 async function loop() {
-  for (; ;) {
+  for (;;) {
     const pw = await ask("password> ");
     if (pw === "q") { ws.send(JSON.stringify({ t: "destroy" })); setTimeout(() => process.exit(0), 300); return; }
     if (!pw || !session) continue;

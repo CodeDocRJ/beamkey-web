@@ -1,6 +1,6 @@
 # Relay API + Android integration guide
 
-Base URL: `https://<your-domain>` (local: `http://localhost:8787`, WebSocket scheme `ws://`).
+Base URL: `https://getbeamkey.com` (local: `http://localhost:8787`, WebSocket scheme `ws://`).
 All bodies are JSON. All binary values are **base64url without padding**.
 
 ## 1. How a session works

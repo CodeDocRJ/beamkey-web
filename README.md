@@ -1,4 +1,4 @@
-# Room relay (phone -> laptop clipboard)
+# Beamkey relay (phone -> laptop clipboard) - getbeamkey.com
 
 Cloudflare Worker + Durable Objects relay, static website, and the Android integration guide.
 
@@ -24,9 +24,10 @@ Requires Node 20+.
 npx wrangler login
 npm run deploy     # -> https://room-relay.<your-subdomain>.workers.dev
 ```
-1. Open that workers.dev address **from your work laptop first**. If your company filter blocks it, a custom domain may be blocked too.
-2. Custom domain later: add the domain to Cloudflare (change nameservers), then Workers & Pages -> room-relay -> Settings -> Domains -> Add custom domain.
-3. No database or secrets are needed. Rooms live in Durable Object storage for 12 hours and are deleted.
+1. Open the workers.dev address **from your work laptop first**. If your company filter blocks it, a custom domain may be blocked too.
+2. The production address is https://getbeamkey.com (and www). It is declared in `wrangler.toml` under `routes`, so every deploy keeps it attached. Prerequisite: the domain is on Cloudflare (nameservers changed at the registrar) and has no leftover A/AAAA/CNAME record for `@` or `www`.
+3. The Worker name in `wrangler.toml` (`room-relay`) must match the Worker name in Cloudflare, or a deploy creates a second Worker.
+4. No database or secrets are needed. Rooms live in Durable Object storage for 12 hours and are deleted.
 
 ## Tuning for public use
 - Limits are in `src/index.js` (`LIMITS`) and `src/room.js` (`MAX_DENIALS`, `SEND_LIMIT`). Limits are per IP, so raise `join` if many colleagues share one office IP.

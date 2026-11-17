@@ -2,6 +2,15 @@ name = "room-relay"
 main = "src/index.js"
 compatibility_date = "2025-06-01"
 
+# Public addresses. Wrangler creates the DNS records and HTTPS certificates for these
+# when you deploy, as long as the domain is on Cloudflare (nameservers changed) and
+# there is no other DNS record already using the same name.
+workers_dev = true
+routes = [
+  { pattern = "getbeamkey.com", custom_domain = true },
+  { pattern = "www.getbeamkey.com", custom_domain = true },
+]
+
 # Static website (public/) is served directly; /api/* and /ws/* go to the Worker.
 [assets]
 directory = "./public"
@@ -17,8 +26,3 @@ class_name = "Limiter"
 [[migrations]]
 tag = "v1"
 new_sqlite_classes = ["Room", "Limiter"]
-
- routes = [
-     { pattern = "getbeamkey.com", custom_domain = true },
-     { pattern = "www.getbeamkey.com", custom_domain = true }
-   ]
